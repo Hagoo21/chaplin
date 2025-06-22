@@ -8,6 +8,7 @@ mediapipe
 torch
 torchvision
 torchaudio
-ollama
+openai
 pydantic
 keyboard
+python-dotenv

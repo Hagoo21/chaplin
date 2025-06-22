@@ -29,12 +29,13 @@ Watch a demo of Chaplin [here](https://youtu.be/qlHi0As2alQ).
    ```
 4. Install and run `ollama`, and pull the [`llama3.2`](https://ollama.com/library/llama3.2) model.
 5. Install [`uv`](https://github.com/astral-sh/uv).
+6. Create a .env file in the home directory. And add your OPENAI_API_KEY=""
 
 ## Usage
 
 1. Run the following command:
    ```bash
-   sudo uv run --with-requirements requirements.txt --python 3.12 main.py config_filename=./configs/LRS3_V_WER19.1.ini detector=mediapipe
+   uv run --with-requirements requirements.txt --python 3.12 main.py config_filename=./configs/LRS3_V_WER19.1.ini detector=mediapipe
    ```
 2. Once the camera feed is displayed, you can start "recording" by pressing the `option` key (Mac) or the `alt` key (Windows/Linux), and start mouthing words.
 3. To stop recording, press the `option` key (Mac) or the `alt` key (Windows/Linux) again. You should see some text being typed out wherever your cursor is.

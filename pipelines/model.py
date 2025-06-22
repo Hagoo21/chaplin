@@ -40,7 +40,7 @@ class AVSR(torch.nn.Module):
             self.token_list = self.train_args.char_list
         elif labels_type == "unigram5000":
             file_path = os.path.join(os.path.dirname(__file__), "tokens", "unigram5000_units.txt")
-            self.token_list = ['<blank>'] + [word.split()[0] for word in open(file_path).read().splitlines()] + ['<eos>']
+            self.token_list = ['<blank>'] + [word.split()[0] for word in open(file_path, encoding='utf-8').read().splitlines()] + ['<eos>']
         self.odim = len(self.token_list)
 
         self.model = E2E(self.odim, self.train_args)
